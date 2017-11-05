@@ -1,0 +1,16 @@
+7d1bd427c3ef94d44996fd667803a239 *DESCRIPTION
+808b4afcfbf1887ac3cad427a6d1b297 *LICENSE
+7c6b3ded0534d750302fd055dcde9b17 *NAMESPACE
+f3c0bd9bedce7d02d88384eb9099d186 *R/covbalance.R
+476d6841bebc9c92c39b4a759d4e3ba9 *R/kwaymatching.R
+29dc0baf1bb30de13ff8fbfec0509664 *R/multigrp_dist_struc.R
+2869cf3ee92138e6deab178d60580b99 *R/nrbalancematch.R
+1613a8642bbc3f5062ba6c9145265dd4 *R/tripletmatching.R
+6f75349b3e3738dc4caae17cb3d9c09f *build/partial.rdb
+83610c15c1d2246f2fe0cd464cdf6702 *data/Dodgeram.rda
+0cf10f7319cc70ce85b57428e586ba4b *man/Dodgeram.Rd
+f40002e2167991f4edff51d78628e45d *man/approxmatch-package.Rd
+2465cf0298078b99cf2bc1cc52cc73f2 *man/covbalance.Rd
+4215266c1bad6c2cd4e7bbdc69221ed6 *man/kwaymatching.Rd
+0e7f317245bb0ae188e615979ecb6dc4 *man/multigrp_dist_struc.Rd
+c7c94ccd9c27cff775bcea1690f4c8db *man/nrbalancematch.Rd
