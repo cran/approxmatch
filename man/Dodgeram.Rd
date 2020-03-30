@@ -2,11 +2,11 @@
 \alias{Dodgeram}
 \docType{data}
 \title{
-Dodge ram pk 2500 data on side airbag (SAB) usage
+Dodge ram pk 2500 data on side airbag (SAB) usage from 1995 to 2015
 }
 \description{
 This is an example dataset on the description of the Dodge pk 2500 cars involved
-in fatal crashes. 
+in fatal crashes between 1995 to 2015. 
 }
 \usage{data("Dodgeram")}
 \format{

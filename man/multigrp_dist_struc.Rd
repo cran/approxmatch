@@ -32,7 +32,8 @@ multigrp_dist_struc(.data, grouplabel, components, wgts)
 	Element named 'mahal' or 'Mahalanobis' for rank based
 	Mahalanobis distance. 
 	
-	User can spacify their own distance function. For example, a function \code{myDist} should be a function of two arguments:
+	User can spacify their own distance function. For example, a function 
+	\code{myDist} should be a function of two arguments:
 	a logical vector of the first group indicator and a data matrix. It
 	should return a numeric matrix of size number of units of 
 	first group\eqn{\times}number of units of 
@@ -79,10 +80,26 @@ Bikram Karmakar
 	            mahal = c("IMPACT3", "REST_USE1"))
 	wgts <- c(5, 8, 20)
 	
-	distmat <- multigrp_dist_struc(Dodgeram, grouplabel = c("NOSAB", "optSAB", "WITHSABS"), 
-	                                   components, wgts)
+	distmat <- multigrp_dist_struc(Dodgeram, 
+            grouplabel = c("NOSAB","optSAB","WITHSABS"), components, wgts)
 	
+	## Propensity score caliper can be implemented mannually
 	
+	distmat <- multigrp_dist_struc(Dodgeram, 
+            grouplabel = c("NOSAB","optSAB","WITHSABS"), 
+            list(mahal = c("SEX.2", "AGE", "SP_LIMIT", "DR_DRINK"), 				
+                mahal = c("IMPACT3", "REST_USE1")), wgts=c(2, 5))
+	distmat_prop <- multigrp_dist_struc(Dodgeram, 
+                grouplabel = c("NOSAB", "optSAB", "WITHSABS"), 
+              list(prop = c("AGE", "SEX.2", "FR.pass", "REST_USE1", "ROLLOVER1",
+	            "IMPACT3", "SP_LIMIT", "DR_DRINK", "FIRE_EXP1.1")), 1)
+		
+	## Distance structure with caliper
+	for(i in 1:length(distmat))
+			distmat[[i]][distmat_prop[[i]]>.2] <- 100*max(distmat[[i]])
+			
+				
+									   
 ## An example function for argument detail.
 
 smahal <-  function(z,X){

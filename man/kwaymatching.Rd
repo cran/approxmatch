@@ -3,7 +3,7 @@
 \alias{tripletmatching}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Create approximately optimal matched strata of multiple groups.
+Create approximately optimal matched strata of multiple, at least two, groups.
 }
 \description{
 This function takes as input a distance structure and grouping labels of units 
@@ -115,8 +115,9 @@ is not present. Reference to optmatch is given below.
 	summing over all strata.}
 }
 \references{
-Hansen, B.B. and Klopfer, S.O. (2006) Optimal full matching and related designs via network flows,
-JCGS 15 609--627.
+Karmakar, B., Small, D. S. and Rosenbaum, P. R. (2019) Using Approximation Algorithms to Build 
+Evidence Factors and Related Designs for Observational Studies, Journal of Computational 
+and Graphical Statistics, 28, 698--709.
 }
 \author{
 Bikram Karmakar

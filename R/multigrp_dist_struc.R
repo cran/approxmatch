@@ -100,8 +100,8 @@ proepnsity.model.formula <- as.formula(paste('grpi1 ','~', paste(vars, collapse 
 
 propscore.model = glm(proepnsity.model.formula, data = .data, family = 'binomial')
 
-d <- t(sapply(log(propscore.model$fitted.values[names(which(grpi1))]),
-function(x) abs(x - log(propscore.model$fitted.values[names(which(!grpi1))]))))
+d <- t(sapply((propscore.model$fitted.values[names(which(grpi1))]),
+function(x) abs(x - (propscore.model$fitted.values[names(which(!grpi1))]))))
 } else {
 if(tolower(desc) %in% c("mahalanobis", "mahal")){
 d <- sqrt(smahal(grpi1, .data[, vars]))

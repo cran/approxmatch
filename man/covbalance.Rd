@@ -82,6 +82,10 @@ See \code{\link{kwaymatching}} for usage.
 	
 	grouplabel = 2*Dodgeram$WITHSABS + 1*Dodgeram$NOSAB + 3*Dodgeram$optSAB
 	## An example strata structure
+	## Ideally, these should be calculated from the output of the 
+	##	\code{kwaymatching} function.  For example, if \code{res}
+	##	is the output of this function, use \code{res$matches}.
+	
 	matches = as.matrix(sample(rownames(Dodgeram), 500), ncol = 5)
 	
 	vars = c("AGE", "SEX.2", "IMPACT3.3", "DR_DRINK")
